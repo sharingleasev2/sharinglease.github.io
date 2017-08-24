@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sharing Lease</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://edperf.github.io/test/assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="https://edperf.github.io/test/assets/css/sharing.css" rel="stylesheet" type="text/css"/>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-80816762-1', 'auto');
+      ga('require', 'linkid');
+      ga('send', 'pageview');
+    
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    
+    </script>
+    <!-- Pinterest confirmation -->
+    <meta name="p:domain_verify" content="43ab6538907bcd94bbb661086a994128"/>
+
+    <style type="text/css">
+        html {
+          scroll-behavior: smooth;
+        }
+    </style>
+
+    <script type="text/javascript">
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode".split(" "), 0);
+        branch.init("key_live_djDDEZWT912ltqjqskut5aejtDhUUHjw");
+        function sendSMS(form) {
+            console.log(form);
+            var phone = form.phone.value;
+            var linkData = {
+                tags: [],
+                channel: 'Website',
+                feature: 'TextMeTheApp',
+                data: {
+                    'inviteCode': 'WEBTX'
+                }
+            };
+            var options = {};
+            var callback = function(err, result) {
+                if (err) {
+                    alert("Sorry, something went wrong.");
+                }
+                else {
+                    alert("Text sent!");
+                }
+            };
+            branch.sendSMS(phone, linkData, options, callback);
+            form.phone.value = "";
+        }
+    </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="/"></a>
+                </div>
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse text-center">
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+            <script type="text/javascript">            
+                $(document).ready(function() {
+                    $('#how-it-works').click(function() {
+                        $('html, body').animate({
+                            scrollTop: $("#solution").offset().top
+                        }, 500);                 
+                        ga('send', 'event', 'button', 'click', 'how it works');
+                    });
+                });
+            </script>
+        </nav>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div id="landing-intro" class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="brand-heading">Sharing Lease</h1>
+                        <p class="intro-text">Share yours share mine!</p>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 store-badge-div">
+                                <a href="http://dl.ibrandev.cn/isharinglease" onclick="trackOutboundLink('http://dl.ibrandev.cn/isharinglease'); return false;">
+                                    <img src="http://ov1fl6cu4.bkt.clouddn.com/apple_badge.png" class="store-badge" alt="Download on the Apple App Store">
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 store-badge-div-2">
+                                <a href="http://dl.ibrandev.cn/sharinglease" onclick="trackOutboundLink('http://dl.ibrandev.cn/sharinglease'); return false;">
+                                    <img src="http://ov1fl6cu4.bkt.clouddn.com/google_badge.png" class="store-badge" alt="Get it on Google Play">
+                                </a>
+                            </div>
+                        </div>
+                        
+                       <!--End mc_embed_signup-->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                        <a href="#solution" id="chevron-how-it-works">
+                            <i class="fa fa-chevron-down chevron-icon" aria-hidden="true"></i>
+                        </a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ 
+    <!-- Solution Section -->
+    <section id="solution" class="content-section text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-2 col-md-8">
+            <h1>Welcome to Sharing Lease!</h1>
+            </div>
+        </div>
+
+        <div class="row feature-row-1">
+            <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-text-left">
+                <h2>Renting is Convenient.</h2>
+                <h3>Community Economic Sharing. Sharing goods with families nearby yourself.</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-screenshot">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG1.PNG" alt="share with your partner" class="screenshot">
+            </div>
+        </div>
+
+        <div class="row feature-row">
+            <div class="hidden-xs col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-screenshot">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG2.PNG" alt="share with your partner" class="screenshot">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-text-right">
+                <h2>Sharing Bennifit.</h2>
+                <h3>The leasors share goods with users, the leasors gain benifits, vary convenient for users to use shared goods, people experienced a social sharing of the economy.</h3>
+            </div>
+            <div class="visible-xs col-xs-12">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG2.PNG" alt="share with your partner" class="screenshot">
+            </div>
+        </div>
+
+        <div class="row feature-row">
+
+            <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-text-left">
+                <h2>Various Goods Shared.</h2>
+                <h3>Leasors invest to publish sharing goods into the market, express cabunet box and lockers, Users scan QR code to rent or puchase the goods.</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-screenshot">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG3.PNG" alt="share with your partner" class="screenshot">
+            </div>
+        </div>
+
+        <div class="row feature-row">
+            <div class="hidden-xs col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-screenshot">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG4.PNG" alt="share with your partner" class="screenshot">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-text-right">
+                <h2>Sharing easily</h2>
+                <h3>Publish goods, choose the target contry and city to share your goods, wait for user's renting or purchasing.</h3>
+            </div>
+            <div class="visible-xs col-xs-12">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG4.PNG" alt="share with your partner" class="screenshot">
+            </div>
+        </div>
+
+        <div class="row feature-row">
+            
+            <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-text-left"> 
+               <h2>Open Platform for...</h2>
+               <h3>Umbrellas, Bike, Power banks...</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-screenshot">
+                <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG6.PNG" alt="share with your partner" class="screenshot">
+            </div>
+        </div>
+
+        <div class="row feature-row">
+                <div class="hidden-xs col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-screenshot">
+                    <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG5.PNG" alt="share with your partner" class="screenshot">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-text-right">
+                    <h2>Contact Us.</h2>
+                    <h3>Sharing Lease is an open platform for you!</h3>
+                </div>
+                <div class="visible-xs col-xs-12">
+                    <img src="http://ov1fl6cu4.bkt.clouddn.com/IMG5.PNG" alt="share with your partner" class="screenshot">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+            <!-- Desktop -->
+
+
+            <!-- Mobile -->
+
+    <section id="signup_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Get the app.</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 store-badge-div">
+                        <a href="http://dl.ibrandev.cn/isharinglease" onclick="trackOutboundLink('http://dl.ibrandev.cn/isharinglease'); return false;">
+                            <img src="http://ov1fl6cu4.bkt.clouddn.com/apple_badge.png" class="store-badge" alt="Download on the Apple App Store">
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 store-badge-div-2">
+                        <a href="http://dl.ibrandev.cn/sharinglease" onclick="trackOutboundLink('http://dl.ibrandev.cn/sharinglease'); return false;">
+                            <img src="http://ov1fl6cu4.bkt.clouddn.com/google_badge.png" class="store-badge" alt="Get it on Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div id="contact">
+                        <ul class="list-inline text-center social-row">
+                          <li><a href="http://www.facebook.com/SharingLease" target="_blank"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
+                        
+                          <!-- <li><a href="https://www.pinterest.com/honeyfiapp/" target="_blank"><i class="fa fa-pinterest-p fa-3x" aria-hidden="true"></i></a></li>
+                          <li><a href="http://www.instagram.com/honeyfiapp" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div id="policies">
+                        <ul class="list-inline text-center policies-row">
+                          <li><a href="/about_us.html">About Us</a></li>
+                          <li><a href="/en_agreement.html">Privacy Policy</a></li>
+                          <li><a href="www.miitbeian.gov.cn">www.miitbeian.gov.cn</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="row copyright-row">
+                    <div class="hidden-xs hidden-sm">
+                        <small>Copyright © 2017 Sharing Lease(TOPSTOPS LIMTED) 深圳海博浪科技有限公司 All rights reserved.</small>
+                    </div>
+                    <div class="visible-xs visible-sm col-xs-12 col-sm-12">
+                        <small>Copyright © Sharing Lease(Shenzhen Haibolang Tech. Co, Ltd)</small>
+                    </div>
+                    <div class="visible-xs visible-sm col-xs-12 col-sm-12">
+                        <small>All rights reserved.</small>
+                    </div> 
+                </div>
+    
+            </div>
+        </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="http://ov1fl6cu4.bkt.clouddn.com/bootstrap.min.js"></script>
+    
+    <!-- Font Awesome Fonts -->
+    <script src="https://use.fontawesome.com/ee142979e5.js"></script>
+    
+    <!-- Intercom -->
+
+ 
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="http://ov1fl6cu4.bkt.clouddn.com/grayscale.js"></script>
+
+</body>
+
+</html>
